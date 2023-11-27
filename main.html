@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="July">
+        <meta property="og:site_name" content="Lonely July" />
+        <meta property="og:title" content="Lonely July | Entrance" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="My personal website showing who I am, what I do, and what I plan to do in the future" />
+        <meta property="og:url" content="https://lonelyjuly.online" />
+        <meta property="og:locale" content="ms_MY" />
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:locale:alternate" content="zh_SG" />
+        <meta property="og:locale:alternate" content="en_GB" />
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="es_ES" />
+        <title>LonelyJuly</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="style/kyle.css" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=VT323" />
+      </head>
+      <body>
+        <div class="crt">
+            <div id="container">
+                <header>
+                    <center>
+                    <a href="/home">
+                      <img src="img/banner.png" alt="LonelyJuly Site Banner">
+                    </a>
+                    </center>
+                </header>
+
+                <div id="flex">
+                
+                    <main>
+                        <h1 class="command">PREPARE FOR LANDING...</h1>
+                        <img src="img/logo.png" style="float: left;" width="100px" height="100px">
+                        <p>Welcome to my website, </p><p class="command">LonelyJuly!</p>
+                        <br>
+                        <p>This is where I show what I do, who I am, what I plan on doing, and some other things that are on my mind.</p>
+
+                        <h2 class="command">&gt;UPDATES&lt;</h2>
+                        <div class="flexcontent">
+                            <div class="flex1">
+                                <p style="text-align: center;"><b class="command">[NOVEMBER]</b></p>
+                                <p class="command"><b>11/26/2023</b></p>
+                                <ul>
+                                  <li>Complete site revamp, for the 3rd time</li>
+                                  <li>Fixed scanline issue with only filling half the screen</li>
+                                  <li>Fixed link hovers being the same color as the link background</li>
+                                  <li><a href="https://blog.lonelyjuly.online">BLOG</a> is still WIP, as I've switched my blog to <a href="https://journey.lonelyjuly.online">JOURNEY</a></li>
+                            <blockquote>
+                                <h3 class="command">Blog Preview</h3>
+                                <p>
+                                    <b>UNDER CONSTRUCTION</b>
+                                </p>
+                                <p style="text-align: right; margin-top: -10px;" class="command"><a href="https://blog.lonelyjuly.online">View other posts -\></a></p>
+                            </blockquote>
+                        </div>
+                    </main>
+                  
+
+                    <nav>
+                        <div class="navbox">
+                            <a id="theme-toggle" onclick="modeSwitcher()" class="lightdark"></a>
+                        </div>
+                        <div class="navtitle">&gt;MAIN PAGES&lt;</div>
+                        <div class="navbox">
+                            <a href="/home" class="command">&gt;HOME&lt;</a>
+                            <a href="/about" class="command">&gt;ABOUT&lt;</a>
+                            <a href="https://journey.lonelyjuly.online/" class="command">&gt;MY JOURNEY&lt;</a>
+                            <a href="/links" class="command">&gt;LINKS&lt;</a>
+                            <a href="https://lonelyjuly.123guestbook.com" class="command">&gt;GUESTBOOK&lt;</a>
+                            <a href="/bbs" class="command">&gt;BB&amp;S&lt;</a>
+                            <a href="/sitemap" class="command">&gt;SITEMAP&lt;</a>
+                        </div>
+                        <div class="navtitle">&gt;OUTSIDER LINKS&lt;</div>
+                        <div class="navbox">
+                            <a href="https://blog.lonelyjuly.online" class="command">&gt;BLOG&lt;</a>
+                            <a href="https://github.com/StellrVR" class="command">&gt;GITHUB&lt;</a>
+                            <a href="https://vrchat.com/home/user/usr_b35d613e-3896-4303-a120-4fbbff8ef108" class="command">&gt;VRCHAT PROFILE&lt;</a>
+                            <a href="https://bsky.app/profile/stellr.bsky.social" class="command">&gt;BLUESKY&lt;</a>
+                            <a href="mailto:july@lonelyjuly.online" class="command">&gt;EMAIL ME&lt;</a>
+                            <a href="https://discord.com/users/257252196926750720" class="command">&gt;DISCORD&lt;</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <footer>
+                    <p>
+                        © LonelyJuly 2023.<br>
+                        <b>Last Update:</b> <span id="lastupdate"></span> | <b>Total Views:</b> <span id="hitcount"></span><br>
+                        <a href="credits.html" class="command">CREDITS</a> | <a href="#" class="command">BACK TO TOP</a><br>
+                    </p>
+                </footer>
+            </div>
+            <script type="text/javascript">
+                const lightbox = GLightbox({
+                    selector: '.glightbox1',
+                    touchNavigation: true,
+                    loop: true,
+                    autoplayVideos: true,
+                    onOpen: () => {
+                        console.log('Lightbox opened')
+                    },
+                    beforeSlideLoad: (slide, data) => {
+                        // Need to execute a script in the slide?
+                        // You can do that here...
+                    }
+                });
+              </script>
+              <script>
+                var xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                          var site_data = JSON.parse(this.responseText);
+                          var num_arr = site_data.info.views.toString().split("");
+                          var num_str = "";
+                          for (i = 0; i < num_arr.length; i++) {
+                              num_str += num_arr[i];
+                              if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+                              var date_str = site_data.info.last_updated;
+                              var date_obj = new Date(site_data.info.last_updated);
+                              document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+                          }
+                          document.getElementById("hitcount").innerHTML = num_str;
+                      }
+                  };
+                  xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=lonelyjuly", true);
+                  xhttp.send();
+              </script>
+              <script>
+
+      // this checks whether system dark mode is set 
+      let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)"); 
+      // this checks for session storage telling to override
+      // the system preferences 
+      let theme = sessionStorage.getItem('theme');
+
+      if (systemInitiatedDark.matches) {
+        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+      } else {
+        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+      }
+
+      function prefersColorTest(systemInitiatedDark) {
+        if (systemInitiatedDark.matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');		
+          document.getElementById("theme-toggle").innerHTML = "Light Mode";
+          // this clears the session storage 
+          sessionStorage.setItem('theme', '');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+          sessionStorage.setItem('theme', '');
+        }
+      }
+
+      systemInitiatedDark.addListener(prefersColorTest);
+
+      function modeSwitcher() {
+      // it’s important to check for overrides again 
+        let theme = sessionStorage.getItem('theme');
+        // checks if reader selected dark mode 
+        if (theme === "dark") {
+          document.documentElement.setAttribute('data-theme', 'light');
+          sessionStorage.setItem('theme', 'light');
+          document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+          // checks if reader selected light mode 
+        }	else if (theme === "light") {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          sessionStorage.setItem('theme', 'dark');
+          document.getElementById("theme-toggle").innerHTML = "Light Mode";
+          // checks if system set dark mode 
+        } else if (systemInitiatedDark.matches) {	
+          document.documentElement.setAttribute('data-theme', 'light');
+          sessionStorage.setItem('theme', 'light');
+          document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+          // the only option left is system set light mode
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          sessionStorage.setItem('theme', 'dark');
+          document.getElementById("theme-toggle").innerHTML = "Light Mode";
+        }
+      }
+
+      if (theme === "dark") {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        sessionStorage.setItem('theme', 'dark');
+        document.getElementById("theme-toggle").innerHTML = "Light Mode";
+      } else if (theme === "light") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sessionStorage.setItem('theme', 'light');
+        document.getElementById("theme-toggle").innerHTML = "Dark Mode";
+      }
+
+    </script>
+              <script>
+                const manual = new Freezeframe('.freezeframe', {
+                    trigger: false
+                });
+          
+                document
+                    .querySelector('#start')
+                    .addEventListener('click', () => {
+                        manual.start();
+                    });
+          
+                document
+                    .querySelector('#stop')
+                    .addEventListener('click', () => {
+                        manual.stop();
+                    });
+              </script>
+        </div>
+      </body>
+</html>
